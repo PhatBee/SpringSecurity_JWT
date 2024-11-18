@@ -1,10 +1,9 @@
-package vn.oneshop.springsecurity_jwt.Services;
+package vn.oneshop.springsecurity_jwt.Configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import vn.oneshop.springsecurity_jwt.Configs.UserInfoUserDetails;
 import vn.oneshop.springsecurity_jwt.Repository.UserInfoRepository;
 import vn.oneshop.springsecurity_jwt.entity.UserInfo;
 
