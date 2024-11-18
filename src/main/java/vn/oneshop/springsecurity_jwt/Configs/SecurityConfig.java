@@ -61,10 +61,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/").permitAll()
-                        .requestMatchers("/customer/**").authenticated()
-                        .anyRequest().authenticated()
-                        )
+                                .requestMatchers("/user/new").permitAll()
+                                .requestMatchers("/").permitAll()
+                                .requestMatchers("/customer/**").authenticated()
+                                .anyRequest().authenticated()
+                                )
                 .formLogin(Customizer.withDefaults())
                 .build();
     }
